@@ -5,15 +5,14 @@ let headsdata = [
         name: "cherry",
         level: 0,
         size: 20,
-        color: "#FF0000", // Red
-        texture:"/img/level0.png"
+        color: "#FF0000" // Red
+        
     },
     {
         name: "seedy",
         level: 1,
         size: 30,
-        color: "#008000", // Green
-        texture:"/img/level0.png"
+        color: "#008000" // Green
     },
 
 
@@ -21,15 +20,13 @@ let headsdata = [
         name: "orange",
         level: 2,
         size: 40,
-        color: "#FFA500", // Orange
-        texture:"/img/level0.png"
+        color: "#FFA500" // Orange
     },
     {
         name: "lemon",
         level: 3,
         size: 50,
-        color: "#E63745", // Orange
-        texture:"/img/level0.png"
+        color: "#E63745" // Orange
     },
 
 
@@ -38,15 +35,13 @@ let headsdata = [
         name: "kiwi",
         level: 4,
         size: 60,
-        color: "#FFA500", // Orange
-        texture:"/img/level0.png"
+        color: "#FFA500" // Orange
     },
     {
         name: "peach",
         level: 5,
         size: 70,
-        color: "#E63745", // Orange
-        texture:"/img/level0.png"
+        color: "#E63745" // Orange
     },
 
 
@@ -55,15 +50,13 @@ let headsdata = [
         name: "pomegranate",
         level: 6,
         size: 80,
-        color: "#765827", // Brown
-        texture:"/img/level0.png"
+        color: "#765827" // Brown
     },
     {
         name: "pineapple",
         level: 7,
         size: 90,
-        color: "#008000", // Green
-        texture:"/img/level0.png"
+        color: "#008000" // Green
     },
 
 
@@ -73,15 +66,13 @@ let headsdata = [
         name: "coconut",
         level: 8,
         size: 100,
-        color: "#765827", // Brown
-        texture:"/img/level0.png"
+        color: "#765827" // Brown
     },
     {
         name: "watermelon",
         level: 9,
         size: 150,
-        color: "#008000", // Green
-        texture:"/img/level0.png"
+        color: "#008000" // Green
     }
 ]
 
@@ -109,6 +100,21 @@ let handpos = [canvasBox.offsetWidth / 2, 70]
 
 let playing = true
 
+
+function preload() {
+
+    headsdata[0].image = loadImage('./img/level0.png');
+    headsdata[1].image = loadImage('./img/level1.png');
+    headsdata[2].image = loadImage('./img/level2.png');
+    headsdata[3].image = loadImage('./img/level3.png');
+    headsdata[4].image = loadImage('./img/level4.png');
+    headsdata[5].image = loadImage('./img/level5.png');
+    headsdata[6].image = loadImage('./img/level6.png');
+    headsdata[7].image = loadImage('./img/level7.png');
+    headsdata[8].image = loadImage('./img/level8.png');
+    headsdata[9].image = loadImage('./img/level9.png');
+
+}
 
 function setup() {
 
