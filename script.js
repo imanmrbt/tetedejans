@@ -235,9 +235,8 @@ function changeCoordinates(e) {
 }
 
 document.body.addEventListener('touchstart', changeCoordinates);
-/*document.body.addEventListener('touchstart', function() {
-  handpos[0]  = touches[0].clientX;
-});*/
+document.body.addEventListener('touchmove', changeCoordinates);
+
 
 document.body.addEventListener('touchend', function() {
 // release the inhand head
