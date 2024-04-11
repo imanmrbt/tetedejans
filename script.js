@@ -234,7 +234,7 @@ function changeCoordinates(e) {
   handpos[0]  = `${e.touches[0].clientX}`;
 }
 
-document.body.addEventListener('touchmove', changeCoordinates);
+document.body.addEventListener('touchstart', changeCoordinates);
 
 
 document.body.addEventListener('touchend', function() {
