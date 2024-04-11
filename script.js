@@ -132,15 +132,15 @@ function setup() {
     ground = new Ground(width / 2, height, 60, engine.world)
     leftWall = Matter.Bodies.rectangle(0, height / 2, 10, height, { isStatic: true });
     rightWall = Matter.Bodies.rectangle(width, height / 2, 10, height, { isStatic: true });
-   /* topLine = Matter.Bodies.rectangle(width, height / 2, 10, height,{
+    topLine = Matter.Bodies.rectangle(width/ 2, height , 10, {
         isStatic: true,
         isSensor: true,
        render: {fillStyle: "#FF69B4",},
        label: "topLine",
-       },);*/
+       },);
 
 
-    Composite.add(engine.world, [leftWall, rightWall,/* topLine*/]);
+    Composite.add(engine.world, [leftWall, rightWall, topLine]);
 
 
     // create one head in hand
