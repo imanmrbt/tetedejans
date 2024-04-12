@@ -244,7 +244,7 @@ function checkCollisions(circles) {
             // Check if the circles have the same type and are colliding
             if (circleA.level === circleB.level && circleA.level < headsdata.length - 1 && Query.collides(circleA.body, [circleB.body]).length > 0) {
                 // Circles with the same type are touching each other
-                console.log(`Circles ${i} and ${j} with type ${circleA.level} are touching.`);
+                console.log(`Circles ${i} and ${j} with type ${circleA.level} are touching.`)
                 console.log(checkCollisions(circles));
                 // if two objects of the same level group are touching
 
@@ -330,7 +330,7 @@ function drawDashedLine() {
 
 
     for (let x = 0; x < lineLength; x += dashLength + gapLength) {
-        line(x, y, x + dashLength, y);
+        line(x, y, x + dashLength, y)
     }
 console.log(drawDashedLine());
 }
