@@ -244,8 +244,8 @@ function checkCollisions(circles) {
             // Check if the circles have the same type and are colliding
             if (circleA.level === circleB.level && circleA.level < headsdata.length - 1 && Query.collides(circleA.body, [circleB.body]).length > 0) {
                 // Circles with the same type are touching each other
-                console.log(`Circles ${i} and ${j} with type ${circleA.level} are touching.`)
-                console.log(checkCollisions(circles));
+                console.log(`Circles ${i} and ${j} with type ${circleA.level} are touching.`);
+
                 // if two objects of the same level group are touching
 
                 // create a a new object with one level higher level in the position between two previous bodies
@@ -276,6 +276,7 @@ function checkCollisions(circles) {
 
                 }
 
+
                 let newhigherlevelhead = new Head(engine.world, templevel + 1);
                 newhigherlevelhead.isfixed = false
 
@@ -285,6 +286,10 @@ function checkCollisions(circles) {
                 Matter.Body.setPosition(newhigherlevelhead.body, { x: middle.x, y: middle.y });
 
                 heads.push(newhigherlevelhead)
+
+
+
+
 
             }
         }
@@ -330,9 +335,8 @@ function drawDashedLine() {
 
 
     for (let x = 0; x < lineLength; x += dashLength + gapLength) {
-        line(x, y, x + dashLength, y)
+        line(x, y, x + dashLength, y);
     }
-console.log(drawDashedLine());
 }
 
 
