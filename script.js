@@ -88,7 +88,6 @@ var Engine = Matter.Engine,
 var engine
 let leftWall;
 let rightWall;
-let topLine;
 
 var ground
 
@@ -118,9 +117,6 @@ function preload() {
 
 function setup() {
 
-
-    // Create a p5.js canvas inside the "canvasbox" div
-    // const canvas = createCanvas(canvasBox.offsetWidth, 800);
     const canvas = createCanvas(canvasBox.offsetWidth, canvasBox.offsetHeight);
 
     canvas.parent("canvasbox"); // Attach the canvas to the div
@@ -132,15 +128,7 @@ function setup() {
     ground = new Ground(width / 2, height, 60, engine.world)
     leftWall = Matter.Bodies.rectangle(0, height / 2, 10, height, { isStatic: true });
     rightWall = Matter.Bodies.rectangle(width, height / 2, 10, height, { isStatic: true });
-    topLine = Matter.Bodies.rectangle(width/ 2, height , 10, {
-        isStatic: true,
-        isSensor: true,
-       render: {fillStyle: "#FF69B4",},
-       label: "topLine",
-       },);
-
-
-    Composite.add(engine.world, [leftWall, rightWall, topLine]);
+    Composite.add(engine.world, [leftWall, rightWall]);
 
 
     // create one head in hand
@@ -189,18 +177,6 @@ function draw() {
         // draw line
         drawDashedLine()
     }
-
-    // if heads are getting closer draw the line
-    if (findObjectWithLowestY(heads) < 150) {
-        // gameover
-        // disable controls
-        // playing = false
-        // show gae over message
-
-    }
-
-
-
 }
 
 function movehand() {
@@ -269,7 +245,7 @@ function checkCollisions(circles) {
             if (circleA.level === circleB.level && circleA.level < headsdata.length - 1 && Query.collides(circleA.body, [circleB.body]).length > 0) {
                 // Circles with the same type are touching each other
                 console.log(`Circles ${i} and ${j} with type ${circleA.level} are touching.`);
-
+                console.log(checkCollisions(circles));
                 // if two objects of the same level group are touching
 
                 // create a a new object with one level higher level in the position between two previous bodies
@@ -300,7 +276,6 @@ function checkCollisions(circles) {
 
                 }
 
-
                 let newhigherlevelhead = new Head(engine.world, templevel + 1);
                 newhigherlevelhead.isfixed = false
 
@@ -310,10 +285,6 @@ function checkCollisions(circles) {
                 Matter.Body.setPosition(newhigherlevelhead.body, { x: middle.x, y: middle.y });
 
                 heads.push(newhigherlevelhead)
-
-
-
-
 
             }
         }
@@ -361,7 +332,9 @@ function drawDashedLine() {
     for (let x = 0; x < lineLength; x += dashLength + gapLength) {
         line(x, y, x + dashLength, y);
     }
+console.log(drawDashedLine());
 }
+
 
 
 function findObjectWithLowestY(heads) {
