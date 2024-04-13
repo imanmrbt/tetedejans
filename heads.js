@@ -3,7 +3,6 @@ class Head {
 
         this.level = headsdata[rannum].level
         this.size = headsdata[rannum].size
-        this.image = headsdata[rannum].image
 
         this.isfixed = true
         this.radus = this.size
@@ -38,7 +37,7 @@ class Head {
         push();
         translate(pos.x, pos.y);
         rotate(angle); // Apply the rotation angle
-        restitution(0.7)
+        //  fill(this.color);
         noStroke();
         // ellipse(0, 0, radius * 2);
         image(headsdata[this.level].image, - radius, - radius, radius * 2, radius * 2);
