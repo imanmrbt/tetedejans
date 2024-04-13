@@ -2,77 +2,51 @@ const canvasBox = document.getElementById("canvasbox");
 
 let headsdata = [
     {
-        name: "cherry",
         level: 0,
-        size: 20,
-        color: "#FF0000" // Red
-        
+        size: 20    
     },
     {
-        name: "seedy",
         level: 1,
-        size: 30,
-        color: "#008000" // Green
-    },
-
-
+        size: 30
+        },
     {
-        name: "orange",
         level: 2,
-        size: 40,
-        color: "#FFA500" // Orange
-    },
+        size: 40
+        },
     {
-        name: "lemon",
         level: 3,
-        size: 50,
-        color: "#E63745" // Orange
-    },
-
-
-
+        size: 50
+        },
     {
-        name: "kiwi",
         level: 4,
-        size: 60,
-        color: "#FFA500" // Orange
+        size: 60
     },
     {
-        name: "peach",
         level: 5,
-        size: 70,
-        color: "#E63745" // Orange
+        size: 70
     },
 
 
 
     {
-        name: "pomegranate",
         level: 6,
-        size: 80,
-        color: "#765827" // Brown
+        size: 80
     },
     {
-        name: "pineapple",
         level: 7,
-        size: 90,
-        color: "#008000" // Green
+        size: 90
     },
 
 
 
 
     {
-        name: "coconut",
         level: 8,
-        size: 100,
-        color: "#765827" // Brown
+        size: 100
     },
     {
-        name: "watermelon",
         level: 9,
-        size: 150,
-        color: "#008000" // Green
+        size: 150
     }
 ]
 
@@ -173,11 +147,10 @@ function draw() {
 
 
     // if heads are getting closer draw the line
-    if (findObjectWithLowestY(heads) < 200 && !keyPressed()) {
+    if (findObjectWithLowestY(heads) < 200) {
         // draw line
         drawDashedLine()
     }
-    else return;
 }
 
 function movehand() {
