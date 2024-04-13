@@ -173,7 +173,7 @@ function draw() {
 
 
     // if heads are getting closer draw the line
-    if (findObjectWithLowestY(heads) < 200) {
+    if (findObjectWithLowestY(heads) < 200 && !keyPressed()) {
         // draw line
         drawDashedLine()
     }
