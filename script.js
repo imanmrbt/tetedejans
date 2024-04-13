@@ -177,6 +177,7 @@ function draw() {
         // draw line
         drawDashedLine()
     }
+    else return;
 }
 
 function movehand() {
