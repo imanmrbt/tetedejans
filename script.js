@@ -28,7 +28,7 @@ let handpos = [canvasBox.offsetWidth / 2, 70]
 
 let playing = true
 
-heads.restitution = 0.4;
+heads.body.restitution = 0.4;
 
 
 function preload() {
@@ -199,7 +199,7 @@ function checkCollisions(circles) {
                 
 
                 
-    if (circleB.body.position.y < 140){
+    if (circleB.body.position.y < 135){
         alert("try again tête de nouille <3 ", location.reload());}
 
                 // update score
