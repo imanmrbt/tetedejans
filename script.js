@@ -189,7 +189,7 @@ function checkCollisions(circles) {
 
                 
     if (circleB.body.position.y < 135){
-        alert('game over');}
+        alert("Game over, try again =) ", location.reload());}
 
                 // update score
                 score += circleA.level * 10
