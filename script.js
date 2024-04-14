@@ -187,6 +187,9 @@ function checkCollisions(circles) {
                 let tempx2 = circleB.body.position.x
                 let tempy2 = circleB.body.position.y
 
+                
+    if (circleB.body.position.y < 135){
+        alert('game over');}
 
                 // update score
                 score += circleA.level * 10
@@ -225,11 +228,6 @@ function checkCollisions(circles) {
 
 }
 
-function gameOver(){
-    if (circleB.body.position.y < 135){
-    alert('game over');}
-}
-    
 
 function findMiddlePoint(x1, y1, x2, y2) {
     const middleX = (x1 + x2) / 2;
