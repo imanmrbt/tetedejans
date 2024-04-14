@@ -28,8 +28,6 @@ let handpos = [canvasBox.offsetWidth / 2, 70]
 
 let playing = true
 
-heads.body.restitution = 0.4;
-
 
 function preload() {
 
@@ -182,7 +180,6 @@ function checkCollisions(circles) {
             if (circleA.level === circleB.level && circleA.level < headsdata.length - 1 && Query.collides(circleA.body, [circleB.body]).length > 0) {
                 // Circles with the same type are touching each other
                 console.log(`Circles ${i} and ${j} with type ${circleA.level} are touching.`);
-                
                 // if two objects of the same level group are touching
 
                 // create a a new object with one level higher level in the position between two previous bodies
@@ -197,10 +194,8 @@ function checkCollisions(circles) {
                 let tempy2 = circleB.body.position.y
 
                 
-
-                
     if (circleB.body.position.y < 135){
-        alert("try again tête de nouille <3 ", location.reload());}
+        alert("Game over, try again =) ", location.reload());}
 
                 // update score
                 score += circleA.level * 10
