@@ -206,7 +206,10 @@ function checkCollisions(circles) {
                     }
 
                 }
+                //sound
+                var sound = document.getElementById("myAudio"); 
 
+  
 
                 let newhigherlevelhead = new Head(engine.world, templevel + 1);
                 newhigherlevelhead.isfixed = false
@@ -216,8 +219,8 @@ function checkCollisions(circles) {
 
                 Matter.Body.setPosition(newhigherlevelhead.body, { x: middle.x, y: middle.y });
 
-                heads.push(newhigherlevelhead)
-
+                heads.push(newhigherlevelhead);
+                sound.play(); 
 
 
 
