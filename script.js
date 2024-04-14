@@ -28,6 +28,8 @@ let handpos = [canvasBox.offsetWidth / 2, 70]
 
 let playing = true
 
+circle.restitution = 0.4;
+
 
 function preload() {
 
@@ -194,8 +196,10 @@ function checkCollisions(circles) {
                 let tempy2 = circleB.body.position.y
 
                 
-    if (circleB.body.position.y < 135){
-        alert("Game over, try again =) ", location.reload());}
+
+                
+    if (circleB.body.position.y < 140){
+        alert("try again tête de nouille <3 ", location.reload());}
 
                 // update score
                 score += circleA.level * 10
