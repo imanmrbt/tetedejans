@@ -1,53 +1,8 @@
 const canvasBox = document.getElementById("canvasbox");
 
 let headsdata = [
-    {
-        level: 0,
-        size: 20    
-    },
-    {
-        level: 1,
-        size: 30
-        },
-    {
-        level: 2,
-        size: 40
-        },
-    {
-        level: 3,
-        size: 50
-        },
-    {
-        level: 4,
-        size: 60
-    },
-    {
-        level: 5,
-        size: 70
-    },
-
-
-
-    {
-        level: 6,
-        size: 80
-    },
-    {
-        level: 7,
-        size: 90
-    },
-
-
-
-
-    {
-        level: 8,
-        size: 100
-    },
-    {
-        level: 9,
-        size: 150
-    }
+{level: 0, size: 20}, {level: 1, size: 30}, {level: 2, size: 40}, {level: 3, size: 50}, {level: 4, size: 60},
+{level: 5, size: 70}, {level: 6, size: 80}, {level: 7, size: 90}, {level: 8, size: 100}, {level: 9, size: 150}
 ]
 
 
@@ -56,7 +11,7 @@ var Engine = Matter.Engine,
     //   Render = Matter.Render,
     Runner = Matter.Runner,
     Bodies = Matter.Bodies,
-    Detector = Matter.Detector,
+    //Detector = Matter.Detector,
     Query = Matter.Query,
     Composite = Matter.Composite;
 var engine
@@ -219,7 +174,7 @@ function checkCollisions(circles) {
             if (circleA.level === circleB.level && circleA.level < headsdata.length - 1 && Query.collides(circleA.body, [circleB.body]).length > 0) {
                 // Circles with the same type are touching each other
                 console.log(`Circles ${i} and ${j} with type ${circleA.level} are touching.`);
-
+                console.log(circleB);
                 // if two objects of the same level group are touching
 
                 // create a a new object with one level higher level in the position between two previous bodies
