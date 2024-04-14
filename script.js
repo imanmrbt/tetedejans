@@ -226,7 +226,7 @@ function checkCollisions(circles) {
 }
 
 function gameOver(){
-    if (circleB.body.position.x < 135){
+    if (circleB.body.position.y < 135){
     alert('game over');}
 }
     
