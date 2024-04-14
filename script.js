@@ -123,6 +123,8 @@ function movehand() {
 }
 
 function keyPressed() {
+    var ow = document.getElementById("ow"); 
+    
     if (playing) {
         if (key === ' ') {
             // release the inhand head
@@ -132,6 +134,7 @@ function keyPressed() {
             // assign new head in hand
 
             assignheadinhand()
+            ow.play() 
         }
     }
 }
@@ -144,6 +147,8 @@ document.body.addEventListener('touchstart', changeCoordinates);
 
 
 document.body.addEventListener('touchend', function() {
+    
+var ow = document.getElementById("ow"); 
 // release the inhand head
 headinhand.isfixed = false
 // move head in hand to heads array
@@ -151,6 +156,7 @@ heads.push(headinhand)
 // assign new head in hand
 
 assignheadinhand()
+ow.play() 
  });
 
 
@@ -207,7 +213,7 @@ function checkCollisions(circles) {
 
                 }
                 //sound
-                var sound = document.getElementById("myAudio"); 
+                var sound = document.getElementById("DoofenshmirtzEvilInc"); 
 
   
 
