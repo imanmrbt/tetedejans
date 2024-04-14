@@ -174,7 +174,6 @@ function checkCollisions(circles) {
             if (circleA.level === circleB.level && circleA.level < headsdata.length - 1 && Query.collides(circleA.body, [circleB.body]).length > 0) {
                 // Circles with the same type are touching each other
                 console.log(`Circles ${i} and ${j} with type ${circleA.level} are touching.`);
-                console.log(circleB);
                 // if two objects of the same level group are touching
 
                 // create a a new object with one level higher level in the position between two previous bodies
@@ -224,11 +223,13 @@ function checkCollisions(circles) {
         }
     }
 
-
-
-
-
 }
+
+function gameOver(){
+    if (circleB.body.position.x < 135){
+    alert('game over');}
+}
+    
 
 function findMiddlePoint(x1, y1, x2, y2) {
     const middleX = (x1 + x2) / 2;
